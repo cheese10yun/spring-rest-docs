@@ -32,3 +32,8 @@
 | `500 Internal Server Error`
 | Server Error
 |===
+
+[[overview-error-response]]
+=== HTTP Error Response
+
+operation::rest-document/sample-request[snippets='http-response,response-fields']
