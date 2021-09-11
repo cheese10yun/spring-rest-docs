@@ -1,0 +1,49 @@
+= REST Docs 제목
+Andy Wilkinson;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:sectlinks:
+
+
+[[Member-API]]
+== Member API
+
+[[Member-단일-조회]]
+=== Member 단일 조회
+include::{snippets}/member-api-test/member_get/curl-request.adoc[]
+include::{snippets}/member-api-test/member_get/http-request.adoc[]
+include::{snippets}/member-api-test/member_get/http-response.adoc[]
+include::{snippets}/member-api-test/member_get/httpie-request.adoc[]
+include::{snippets}/member-api-test/member_get/request-body.adoc[]
+include::{snippets}/member-api-test/member_get/response-body.adoc[]
+
+
+[[Member-페이징-조회]]
+=== Member 페이징 조회
+include::{snippets}/member-api-test/member_page_test/curl-request.adoc[]
+include::{snippets}/member-api-test/member_page_test/http-request.adoc[]
+include::{snippets}/member-api-test/member_page_test/http-response.adoc[]
+include::{snippets}/member-api-test/member_page_test/httpie-request.adoc[]
+include::{snippets}/member-api-test/member_page_test/request-body.adoc[]
+include::{snippets}/member-api-test/member_page_test/response-body.adoc[]
+
+[[Member-생성]]
+=== Member 생성
+include::{snippets}/member-api-test/member_create/curl-request.adoc[]
+include::{snippets}/member-api-test/member_create/http-request.adoc[]
+include::{snippets}/member-api-test/member_create/http-response.adoc[]
+include::{snippets}/member-api-test/member_create/httpie-request.adoc[]
+include::{snippets}/member-api-test/member_create/request-body.adoc[]
+include::{snippets}/member-api-test/member_create/response-body.adoc[]
+
+[[Member-수정]]
+=== Member 수정
+include::{snippets}/member-api-test/member_modify/curl-request.adoc[]
+include::{snippets}/member-api-test/member_modify/http-request.adoc[]
+include::{snippets}/member-api-test/member_modify/http-response.adoc[]
+include::{snippets}/member-api-test/member_modify/httpie-request.adoc[]
+include::{snippets}/member-api-test/member_modify/request-body.adoc[]
+include::{snippets}/member-api-test/member_modify/response-body.adoc[]
