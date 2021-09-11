@@ -1,8 +1,8 @@
 package com.rest.docs.member;
 
-import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.put;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.get;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.post;
+import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.put;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
 import static org.springframework.restdocs.payload.PayloadDocumentation.requestFields;
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
@@ -48,16 +48,15 @@ class MemberApiTest extends TestSupport {
             .andDo(
                 restDocs.document(
                     pathParameters(
-                        parameterWithName("id").description("Member id")
+                        parameterWithName("id").description("Member ID")
                     ),
                     responseFields(
-                        fieldWithPath("id").description("Member id"),
-                        fieldWithPath("email").description("Email"),
-                        fieldWithPath("name").description("Name")
+                        fieldWithPath("id").description("ID"),
+                        fieldWithPath("name").description("name"),
+                        fieldWithPath("email").description("email")
                     )
                 )
             )
-
         ;
     }
 
@@ -71,9 +70,9 @@ class MemberApiTest extends TestSupport {
             .andExpect(status().isOk())
             .andDo(
                 restDocs.document(
-                    requestParameters(
-                        parameterWithName("size").optional().description("size"),
-                        parameterWithName("page").optional().description("page")
+                    requestFields(
+                        fieldWithPath("name").description("name"),
+                        fieldWithPath("email").description("email")
                     )
                 )
             )
@@ -96,7 +95,6 @@ class MemberApiTest extends TestSupport {
                     )
                 )
             )
-
         ;
     }
 }
