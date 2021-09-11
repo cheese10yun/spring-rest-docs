@@ -1,4 +1,37 @@
-GET {{host}}/
+## /**
+#     * 1. Member 단일 조회 -> 완료
+#     * 2. Member 생성 -> 완료
+#     * 3. Member 수정 -> 완료
+#     * 4. Member 페이징 조회 ->
+#     */
+
+
+# 1. Member 단일 조회
+GET {{host}}/api/members/1
 Content-Type: application/json
 
 ###
+
+# 2. Member 생성
+POST {{host}}/api/members
+Content-Type: application/json
+
+{
+  "email": "zoo@bbb.com",
+  "name": "zoo"
+}
+
+###
+# 3. Member 수정
+PUT {{host}}/api/members/1
+Content-Type: application/json
+
+{
+  "name": "new-yun"
+}
+
+###
+
+# 4. Member 페이징
+GET {{host}}/api/members?page=0&size=10
+Content-Type: application/json
