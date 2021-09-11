@@ -90,6 +90,9 @@ class MemberApiTest extends TestSupport {
             .andExpect(status().isOk())
             .andDo(
                 restDocs.document(
+                    pathParameters(
+                        parameterWithName("id").description("Member ID")
+                    ),
                     requestFields(
                         fieldWithPath("name").description("name")
                     )
