@@ -1,5 +1,6 @@
 package com.rest.docs.member;
 
+import static com.rest.docs.RestDocsConfiguration.field;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.get;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.post;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.put;
@@ -71,8 +72,8 @@ class MemberApiTest extends TestSupport {
             .andDo(
                 restDocs.document(
                     requestFields(
-                        fieldWithPath("name").description("name"),
-                        fieldWithPath("email").description("email")
+                        fieldWithPath("name").description("name").attributes(field("length", "10")),
+                        fieldWithPath("email").description("email").attributes(field("length", "30"))
                     )
                 )
             )
@@ -94,7 +95,7 @@ class MemberApiTest extends TestSupport {
                         parameterWithName("id").description("Member ID")
                     ),
                     requestFields(
-                        fieldWithPath("name").description("name")
+                        fieldWithPath("name").description("name").attributes(field("length", "10"))
                     )
                 )
             )
