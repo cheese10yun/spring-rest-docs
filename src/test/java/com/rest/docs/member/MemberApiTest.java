@@ -74,7 +74,7 @@ class MemberApiTest extends TestSupport {
                     requestFields(
                         fieldWithPath("name").description("name").attributes(field("length", "10")),
                         fieldWithPath("email").description("email").attributes(field("length", "30")),
-                        fieldWithPath("status").description("Member Status")
+                        fieldWithPath("status").description("Code Member Status 참조")
                     )
                 )
             )

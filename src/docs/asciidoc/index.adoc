@@ -10,3 +10,5 @@ Andy Wilkinson;
 include::overview.adoc[]
 
 include::Member-API.adoc[]
+
+include::code.adoc[]
