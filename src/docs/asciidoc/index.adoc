@@ -1,4 +1,4 @@
-= REST Docs 제목
+= REST Docs
 Andy Wilkinson;
 :doctype: book
 :icons: font
@@ -10,5 +10,7 @@ Andy Wilkinson;
 include::overview.adoc[]
 
 include::Member-API.adoc[]
+
+include::Order-API.adoc[]
 
 include::code.adoc[]
