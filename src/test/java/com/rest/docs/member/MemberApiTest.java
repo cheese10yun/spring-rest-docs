@@ -73,7 +73,8 @@ class MemberApiTest extends TestSupport {
                 restDocs.document(
                     requestFields(
                         fieldWithPath("name").description("name").attributes(field("length", "10")),
-                        fieldWithPath("email").description("email").attributes(field("length", "30"))
+                        fieldWithPath("email").description("email").attributes(field("length", "30")),
+                        fieldWithPath("status").description("Member Status")
                     )
                 )
             )

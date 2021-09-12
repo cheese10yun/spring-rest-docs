@@ -16,7 +16,9 @@ public class MemberSignUpRequest {
     @Size(max = 10)
     private String name;
 
+    private MemberStatus status;
+
     public Member toEntity() {
-        return new Member(email, name);
+        return new Member(email, name, status);
     }
 }
