@@ -101,4 +101,28 @@ class MemberApiTest extends TestSupport {
             )
         ;
     }
+
+
+    @Test
+    public void member_create_글자_length_실패() throws Exception {
+        mockMvc.perform(
+                post("/api/members")
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .content(readJson("/json/member-api/member-create-invalid.json"))
+            )
+            .andExpect(status().isBadRequest())
+        ;
+    }
+
+    @Test
+    public void member_modify_글자_length_실패() throws Exception {
+        mockMvc.perform(
+                put("/api/members/{id}", 1)
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .content(readJson("/json/member-api/member-modify-invalid.json"))
+
+            )
+            .andExpect(status().isBadRequest())
+        ;
+    }
 }
