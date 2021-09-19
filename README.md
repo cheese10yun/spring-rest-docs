@@ -16,7 +16,7 @@ $ ./gradlew asciidoctor
 ```
 $ cid rest-docs
 $ ./gradlew bootJar
-$ java -jar java -jar build/libs/rest-docs-0.0.1-SNAPSHOT.jar 
+$ java -jar build/libs/rest-docs-0.0.1-SNAPSHOT.jar 
 ```
 
 [http://localhost:8383/docs/index.html](http://localhost:8383/docs/index.html) 해당 경로로 REST Docs HTML 문서로 퍼블리싱
